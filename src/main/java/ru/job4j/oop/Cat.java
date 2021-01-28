@@ -16,4 +16,15 @@ public class Cat {
     public void givName(String nick) {
         name = nick;
     }
+
+    public static void main(String[] args) {
+        System.out.println("There are gav's food.");
+        Cat gav = new Cat();
+        gav.eat("kotleta");
+        gav.show();
+        System.out.println("There are black's food.");
+        Cat black = new Cat();
+        black.eat("fish");
+        black.show();
+    }
 }
