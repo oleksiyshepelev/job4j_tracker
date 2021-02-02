@@ -9,8 +9,8 @@ public class MaxTest {
 
     @Test
     public void whenFirst70Second3() {
-        int result = Max.max(70, 3);
-        assertThat(result, is(70));
+        int result = Max.max(7, 3);
+        assertThat(result, is(7));
     }
 
     @Test
