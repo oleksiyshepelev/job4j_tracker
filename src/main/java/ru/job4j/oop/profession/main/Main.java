@@ -1,5 +1,9 @@
-package ru.job4j.oop.profession;
+package ru.job4j.oop.profession.main;
 
+import ru.job4j.oop.profession.Builder;
+import ru.job4j.oop.profession.Dentist;
+import ru.job4j.oop.profession.Programmer;
+import ru.job4j.oop.profession.Surgeon;
 import ru.job4j.oop.profession.makes.Diagnosis;
 import ru.job4j.oop.profession.makes.Operation;
 import ru.job4j.oop.profession.makes.Projects;
