@@ -17,7 +17,7 @@ public class PointTest {
     }
 
     @Test
-    public void whenFirstX0FirstY0SecondX0SecondY10ThierdZ0ThierdZ1istanceIs11() {
+    public void whenFirstX0Y0Z0SecondX2Y2Z2() {
         Point first = new Point(0, 0, 0);
         Point second = new Point(2, 2, 2);
         double result = first.distance(second);
