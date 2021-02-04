@@ -2,9 +2,8 @@ package ru.job4j.oop;
 
 import org.junit.Test;
 
-import static org.hamcrest.Matchers.closeTo;
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.*;
 
 public class PointTest {
 
@@ -17,10 +16,10 @@ public class PointTest {
     }
 
     @Test
-    public void whenFirstX0Y0Z0SecondX2Y2Z2() {
+    public void whenFirstX0Y0Z0SAndSecondX2Y2Z2() {
         Point first = new Point(0, 0, 0);
         Point second = new Point(2, 2, 2);
-        double result = first.distance(second);
-        assertThat(result, is(3.46));
+        double result = first.distance3d(second);
+        assertEquals(result, 3.464, 0.1);
     }
 }
