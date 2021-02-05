@@ -2,18 +2,10 @@ package ru.job4j.pojo;
 
 public class Library {
     public static void main(String[] args) {
-        Book cleanCode = new Book();
-        Book linuxCode = new Book();
-        Book javaCode = new Book();
-        Book pythonCode = new Book();
-        cleanCode.setName("Clean Code");
-        cleanCode.setCountOfPage(200);
-        linuxCode.setName("Linux Code");
-        linuxCode.setCountOfPage(1000);
-        javaCode.setName("Java Code");
-        javaCode.setCountOfPage(1500);
-        pythonCode.setName("Python Code");
-        pythonCode.setCountOfPage(900);
+        Book cleanCode = new Book("Clean Code", 200);
+        Book linuxCode = new Book("Linux Code", 1000);
+        Book javaCode = new Book("Java Code", 1500);
+        Book pythonCode = new Book("Python Code", 900);
         Book[] booksColection = new Book[4];
         booksColection[0] = cleanCode;
         booksColection[1] = linuxCode;
