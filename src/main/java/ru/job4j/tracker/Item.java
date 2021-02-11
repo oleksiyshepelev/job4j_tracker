@@ -1,7 +1,6 @@
 package ru.job4j.tracker;
 
 import java.time.LocalDateTime;
-import java.util.Objects;
 
 public class Item {
     private int id;
@@ -42,10 +41,6 @@ public class Item {
 
     @Override
     public String toString() {
-        return "Item{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", created=" + created +
-                '}';
+        return "Item{" + "id=" + id + ", name='" + name + '\'' + ", created=" + created + '}';
     }
 }
