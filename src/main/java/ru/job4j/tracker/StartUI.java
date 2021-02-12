@@ -23,7 +23,7 @@ public class StartUI {
 
     public static void replaceItem(Input input, Tracker tracker) {
         System.out.println("=== Edit item ====");
-        int idItem = Integer.valueOf(input.askInt("Enter ID: "));
+        int idItem = input.askInt("Enter ID: ");
         String nameItem = input.askStr("Enter name: ");
         Item toReplase = new Item(idItem, nameItem);
         if (tracker.replace(idItem, toReplase)) {
@@ -36,7 +36,7 @@ public class StartUI {
 
     public static void deteleItem(Input input, Tracker tracker) {
         System.out.println("=== Delete item ====");
-        int idDel = Integer.valueOf(input.askInt("Please enter the id: "));
+        int idDel = input.askInt("Please enter the id: ");
         if (tracker.delete(idDel)) {
             System.out.print("The item with ID: " + idDel);
             System.out.println(" was removed.");
@@ -47,7 +47,7 @@ public class StartUI {
 
     public static void searchById(Input input, Tracker tracker) {
         System.out.println("=== Find item by Id ====");
-        int fId = Integer.valueOf(input.askInt("Please enter the id: "));
+        int fId = input.askInt("Please enter the id: ");
         Item itemById = tracker.findById(fId);
         if (itemById != null) {
             System.out.print("The item with this ID ");
@@ -74,7 +74,7 @@ public class StartUI {
         boolean run = true;
         while (run) {
             this.showMenu();
-            int select = Integer.valueOf(input.askInt("Select: "));
+            int select = input.askInt("Select: ");
             if (select == 0) {
                 StartUI.createItem(input, tracker);
             } else if (select == 1) {
