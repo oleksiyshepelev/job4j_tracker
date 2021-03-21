@@ -2,7 +2,6 @@ package ru.job4j.tracker;
 
 import org.junit.Test;
 
-
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
@@ -88,14 +87,12 @@ public class StartUITest {
                 new ExitAction(out)
         };
         new StartUI(out).init(in, tracker, actions);
-        assertThat(out.toString(), is("Menu." + System.lineSeparator()
-                + "0. Show all items" + System.lineSeparator()
-                + "1. Exit" + System.lineSeparator()
-                + "=== Show all items ===" + System.lineSeparator()
-                + findAll + System.lineSeparator() + "Menu."
-                + System.lineSeparator() + "0. Show all items"
-                + System.lineSeparator() + "1. Exit"
-                + System.lineSeparator()));
+        String ln = System.lineSeparator();
+        assertThat(out.toString(), is("Menu." + ln
+                + "0. Show all items" + ln + "1. Exit" + ln
+                + "=== Show all items ===" + ln
+                + findAll + ln + "Menu." + ln + "0. Show all items"
+                + ln + "1. Exit" + ln));
     }
 
     @Test
@@ -112,13 +109,12 @@ public class StartUITest {
                 new ExitAction(out)
         };
         new StartUI(out).init(in, tracker, actions);
-        assertThat(out.toString(), is("Menu." + System.lineSeparator()
-                + "0. Find items by name" + System.lineSeparator()
-                + "1. Exit" + System.lineSeparator() + "=== Find items by name ==="
-                + System.lineSeparator() + "The item is:" + System.lineSeparator()
-                + findIt + System.lineSeparator() + "Menu." + System.lineSeparator()
-                + "0. Find items by name" + System.lineSeparator()
-                + "1. Exit" + System.lineSeparator()));
+        String ln = System.lineSeparator();
+        assertThat(out.toString(), is("Menu." + ln
+                + "0. Find items by name" + ln
+                + "1. Exit" + ln + "=== Find items by name ==="
+                + ln + "The item is:" + ln + findIt + ln + "Menu." + ln
+                + "0. Find items by name" + ln + "1. Exit" + ln));
     }
 
     @Test
@@ -135,12 +131,33 @@ public class StartUITest {
                 new ExitAction(out)
         };
         new StartUI(out).init(in, tracker, actions);
-        assertThat(out.toString(), is("Menu." + System.lineSeparator()
-                + "0. Find item by Id" + System.lineSeparator()
-                + "1. Exit" + System.lineSeparator() + "=== Find item by Id ==="
-                + System.lineSeparator() + "The item with this ID is:"
-                + System.lineSeparator() + findId + System.lineSeparator()
-                + "Menu." + System.lineSeparator() + "0. Find item by Id"
-                + System.lineSeparator() + "1. Exit" + System.lineSeparator()));
+        String ln = System.lineSeparator();
+        assertThat(out.toString(), is("Menu." + ln
+                + "0. Find item by Id" + ln
+                + "1. Exit" + ln + "=== Find item by Id ==="
+                + ln + "The item with this ID is:" + ln + findId + ln
+                + "Menu." + ln + "0. Find item by Id" + ln + "1. Exit" + ln));
+    }
+
+    @Test
+    public void whenInvalidExit() {
+        Output out = new StubOutput();
+        Input in = new StubInput(
+                new String[]{"1", "0"}
+        );
+        Tracker tracker = new Tracker();
+        UserAction[] actions = new UserAction[]{
+                new ExitAction(out)
+        };
+        new StartUI(out).init(in, tracker, actions);
+        String ln = System.lineSeparator();
+        assertThat(out.toString(), is(
+                "Menu." + ln
+                        + "0. Exit" + ln
+                        + "Wrong input, you can select: 0 .. 0" + ln
+                        + "Menu." + ln
+                        + "0. Exit" + ln
+                )
+        );
     }
 }
