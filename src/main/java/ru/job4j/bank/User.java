@@ -2,6 +2,13 @@ package ru.job4j.bank;
 
 import java.util.Objects;
 
+/**
+ * Описание модели пользователя банка.
+ * Это модель содержит поля: номер паспорта и ФИО.
+ *
+ * @author OKEKSIY SHEPELEV
+ * @version 1.0
+ */
 public class User {
     private String passport;
     private String username;
@@ -27,6 +34,11 @@ public class User {
         this.username = username;
     }
 
+    /**
+     * Данный метод сгенерирован автоматически IDEA
+     *
+     * @return {@code true} or {@code false}
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -39,6 +51,11 @@ public class User {
         return Objects.equals(passport, user.passport);
     }
 
+    /**
+     * В данном методе используется уникальное поле passport
+     *
+     * @return {@code int}
+     */
     @Override
     public int hashCode() {
         return Objects.hash(passport);

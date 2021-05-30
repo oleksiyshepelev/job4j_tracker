@@ -2,6 +2,13 @@ package ru.job4j.bank;
 
 import java.util.Objects;
 
+/**
+ * Класс описываете модель банковского счёта.
+ * Эта модель содержит поля: баланс и реквизиты.
+ *
+ * @author OKEKSIY SHEPELEV
+ * @version 1.0
+ */
 public class Account {
     private String requisite;
     private double balance;
@@ -27,6 +34,11 @@ public class Account {
         this.balance = balance;
     }
 
+    /**
+     * Данный метод сгенерирован автоматически IDEA
+     *
+     * @return {@code true} or {@code false}
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -39,6 +51,11 @@ public class Account {
         return Objects.equals(requisite, account.requisite);
     }
 
+    /**
+     * В данном методе используется уникальное поле requisite
+     *
+     * @return {@code int}
+     */
     @Override
     public int hashCode() {
         return Objects.hash(requisite);
