@@ -4,11 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StartUI {
-    /**
-     * Здравствуйте, вопрос - у меня появились новые задания
-     * с 2.2 по 2.8 но по сути это у меня уже сделано, пожалуйста не могли бы вы посмотреть.
-     * Спасибо
-     */
+
     private final Output out;
 
     public StartUI(Output out) {
