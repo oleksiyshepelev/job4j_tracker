@@ -6,7 +6,7 @@ import java.util.Objects;
  * Класс описываете модель банковского счёта.
  * Эта модель содержит поля: баланс и реквизиты.
  *
- * @author OKEKSIY SHEPELEV
+ * @author OLEKSIY SHEPELEV
  * @version 1.0
  */
 public class Account {

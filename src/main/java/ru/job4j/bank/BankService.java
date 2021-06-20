@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * Данный класс описываете банковский сервис
  *
- * @author OKEKSIY SHEPELEV
+ * @author OLEKSIY SHEPELEV
  * @version 1.0
  */
 public class BankService {

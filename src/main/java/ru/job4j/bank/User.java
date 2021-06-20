@@ -6,7 +6,7 @@ import java.util.Objects;
  * Описание модели пользователя банка.
  * Это модель содержит поля: номер паспорта и ФИО.
  *
- * @author OKEKSIY SHEPELEV
+ * @author OLEKSIY SHEPELEV
  * @version 1.0
  */
 public class User {
