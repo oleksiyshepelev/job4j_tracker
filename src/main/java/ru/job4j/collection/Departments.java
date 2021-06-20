@@ -10,10 +10,11 @@ public class Departments {
             String start = "";
             for (String el : value.split("/")) {
                 if (start.equals("")) {
-                    tmp.add(start = el);
+                    start = el;
                 } else {
-                    tmp.add(start += "/" + el);
+                    start += "/" + el;
                 }
+                tmp.add(start);
             }
         }
         return new ArrayList<>(tmp);
@@ -24,5 +25,6 @@ public class Departments {
     }
 
     public static void sortDesc(List<String> orgs) {
+        orgs.sort(new DepDescComp());
     }
 }
