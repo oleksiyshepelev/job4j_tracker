@@ -10,11 +10,9 @@ public class FI {
                 new Attachment("image 3", 120),
                 new Attachment("image 2", 23)
         };
-        Comparator<Attachment> cmpText = (left, right) ->
-                left.getName().compareTo(right.getName());
-        Arrays.sort(atts, cmpText);
-        Comparator<Attachment> cmpDescSize = (left, right) ->
-                right.getName().compareTo(left.getName());
-        Arrays.sort(atts, cmpDescSize);
+        Comparator<String> cmpText = (left, right) ->
+                left.compareTo(right);
+        Comparator<String> cmpDescSize = (left, right) ->
+                Integer.compare(right.length(), left.length());
     }
 }
